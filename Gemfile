@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '4.0.0'
 gem 'sqlite3'
 
 group :assets do
-  gem 'sass-rails', '~> 4.0.0.rc1'
+  gem 'sass-rails', '~> 4.0.0'
   gem 'uglifier', '>= 1.3.0'
   gem 'coffee-rails', '~> 4.0.0'
   gem 'jquery-rails'
@@ -26,6 +26,8 @@ end
 
 group :test do
   gem 'cucumber-rails', :require => false
+  # use head version to remove annoying bug
+  gem 'cucumber', :git => 'git@github.com:cucumber/cucumber'
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
